@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.sandboxpowered.example'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url 'https://dl.bintray.com/sandboxpowered/API/' }
+}
+
+dependencies {
+    implementation platform("org.sandboxpowered.api:api:0.4.+")
+
+    implementation "org.sandboxpowered.api:base"
+    implementation "org.sandboxpowered.api:rendering"
+    implementation "org.sandboxpowered.api:resources"
+}
+
+jar {
+    from 'LICENSE'
+}
